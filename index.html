@@ -5,7 +5,7 @@
 <title>VIP_FIXER™ | Premium Cricket Access</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- META PIXEL (SAFE – NO VALUE / NO CURRENCY) -->
+<!-- META PIXEL (SAFE – ZERO ERROR) -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;n=f.fbq=function(){
@@ -14,62 +14,48 @@ if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
-}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init','YOUR_PIXEL_ID');   // 🔁 apna pixel id lagao
+fbq('init','YOUR_PIXEL_ID');
 fbq('track','PageView');
 </script>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,Arial}
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,Arial}
 body{
   background:#000;
   color:#fff;
   min-height:100vh;
+  padding-bottom:85px;
 }
 
-/* Dubai GIF Background */
-.bg{
+/* FAST VIDEO BACKGROUND */
+.video-bg{
   position:fixed;
   inset:0;
-  background:url('https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif') center/cover no-repeat;
-  filter:brightness(0.35);
   z-index:-1;
+  background:url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1080') center/cover no-repeat;
+}
+.video-bg video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(0.35);
 }
 
-/* Wrapper */
-.wrap{
-  max-width:420px;
-  margin:auto;
-  padding:20px;
-}
+/* Layout */
+.wrap{max-width:420px;margin:auto;padding:18px}
 
-/* Card */
 .card{
-  background:linear-gradient(145deg,#111,#1c1c1c);
-  border-radius:18px;
-  padding:22px;
+  background:rgba(15,15,15,.88);
+  border-radius:16px;
+  padding:20px;
   margin-top:40px;
-  box-shadow:0 0 35px rgba(255,215,0,.6);
-  animation:float 3s ease-in-out infinite;
-}
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-8px)}
+  box-shadow:0 0 18px rgba(255,215,0,.4);
 }
 
-.logo{
-  text-align:center;
-  font-size:26px;
-  font-weight:700;
-  color:gold;
-}
-.sub{
-  text-align:center;
-  font-size:14px;
-  color:#ccc;
-  margin-bottom:14px;
-}
+.logo{text-align:center;font-size:25px;font-weight:800;color:gold}
+.sub{text-align:center;font-size:14px;color:#ccc;margin-bottom:12px}
 
 .badge{
   display:inline-block;
@@ -78,45 +64,48 @@ body{
   padding:6px 14px;
   border-radius:20px;
   font-size:12px;
-  margin:0 auto 15px;
+  margin-bottom:12px;
 }
 
-ul{
-  list-style:none;
-  margin:15px 0;
-}
-ul li{
-  padding:8px 0;
-  border-bottom:1px solid #333;
-  font-size:15px;
-}
+ul{list-style:none;margin:14px 0}
+ul li{padding:7px 0;border-bottom:1px solid #333;font-size:15px}
 
-/* Join Button */
 .join{
   display:block;
   width:100%;
   text-align:center;
   background:linear-gradient(90deg,gold,orange);
   color:#000;
-  padding:15px;
+  padding:14px;
   border-radius:12px;
-  font-weight:700;
+  font-weight:800;
   text-decoration:none;
-  margin-top:20px;
-  animation:pulse 1.5s infinite;
-}
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(255,215,0,.7)}
-  70%{box-shadow:0 0 0 15px rgba(255,215,0,0)}
-  100%{box-shadow:0 0 0 0 rgba(255,215,0,0)}
+  margin-top:18px;
 }
 
-/* Demo Notification */
+/* Sticky CTA */
+.sticky{
+  position:fixed;
+  bottom:0;left:0;right:0;
+  background:#000;
+  padding:10px;
+}
+.sticky a{
+  display:block;
+  background:linear-gradient(90deg,gold,orange);
+  color:#000;
+  text-align:center;
+  padding:14px;
+  border-radius:12px;
+  font-weight:900;
+  text-decoration:none;
+}
+
+/* Notification */
 .notify{
   position:fixed;
-  bottom:15px;
-  left:15px;
-  right:15px;
+  bottom:95px;
+  left:14px;right:14px;
   background:#111;
   border-left:4px solid gold;
   padding:10px;
@@ -124,17 +113,18 @@ ul li{
   font-size:13px;
   display:none;
 }
-.demo{
-  font-size:11px;
-  color:#888;
-  margin-top:4px;
-}
+.demo{font-size:11px;color:#888;margin-top:3px}
 </style>
 </head>
 
 <body>
 
-<div class="bg"></div>
+<!-- FAST VIDEO (poster loads instantly) -->
+<div class="video-bg">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="https://cdn.pixabay.com/vimeo/458161137/cricket-37332.mp4" type="video/mp4">
+  </video>
+</div>
 
 <div class="wrap">
   <div class="card">
@@ -142,15 +132,15 @@ ul li{
     <div class="sub">44,477+ Subscribers</div>
 
     <div style="text-align:center">
-      <span class="badge">PREMIUM CRICKET ZONE</span>
+      <span class="badge">PREMIUM CRICKET ACCESS</span>
     </div>
 
     <ul>
       <li>🏏 IPL Toss & Match Pass</li>
       <li>🌍 World Cup Match Pass</li>
-      <li>🔥 T20 • BBL • WPL Updates</li>
-      <li>📊 Advanced Match Analysis</li>
-      <li>⚡ Fast & Clean Information</li>
+      <li>🔥 T20 • BBL • WPL</li>
+      <li>📊 High Accuracy Analysis</li>
+      <li>⚡ Fast Updates</li>
     </ul>
 
     <a href="https://t.me/YOUR_TELEGRAM_LINK"
@@ -162,35 +152,38 @@ ul li{
   </div>
 </div>
 
+<div class="sticky">
+  <a href="https://t.me/YOUR_TELEGRAM_LINK"
+     target="_blank"
+     onclick="telegramJoinEvent()">
+     🚀 JOIN VIP_FIXER NOW
+  </a>
+</div>
+
 <div class="notify" id="notify"></div>
 
 <script>
-/* SAFE CUSTOM EVENT – NO VALUE / NO CURRENCY */
 function telegramJoinEvent(){
-  if(typeof fbq !== 'undefined'){
-    fbq('trackCustom','TelegramJoinClick',{
-      channel:'VIP_FIXER'
-    });
+  if(typeof fbq!=='undefined'){
+    fbq('trackCustom','TelegramJoinClick',{channel:'VIP_FIXER'});
   }
 }
 
-/* Demo Activity Notification (Safe) */
 const msgs=[
   "User joined VIP_FIXER",
-  "IPL Match Pass viewed",
-  "World Cup Analysis opened",
+  "IPL Toss Pass opened",
+  "World Cup Match viewed",
   "WPL Update checked",
-  "BBL Toss Insight viewed"
+  "BBL Insight accessed"
 ];
-
 function showDemo(){
   const n=document.getElementById('notify');
   n.innerHTML=msgs[Math.floor(Math.random()*msgs.length)] +
-    '<div class="demo">Demo activity preview</div>';
+    '<div class="demo">Demo activity</div>';
   n.style.display='block';
-  setTimeout(()=>n.style.display='none',3000);
+  setTimeout(()=>n.style.display='none',2800);
 }
-setInterval(showDemo,4500);
+setInterval(showDemo,5000);
 </script>
 
 </body>
