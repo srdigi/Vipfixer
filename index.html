@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VIP_FIXER™ | Premium Cricket Access</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- META PIXEL (SAFE – NO VALUE / NO CURRENCY) -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){
+n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init','YOUR_PIXEL_ID');   // 🔁 apna pixel id lagao
+fbq('track','PageView');
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,Arial}
+body{
+  background:#000;
+  color:#fff;
+  min-height:100vh;
+}
+
+/* Dubai GIF Background */
+.bg{
+  position:fixed;
+  inset:0;
+  background:url('https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif') center/cover no-repeat;
+  filter:brightness(0.35);
+  z-index:-1;
+}
+
+/* Wrapper */
+.wrap{
+  max-width:420px;
+  margin:auto;
+  padding:20px;
+}
+
+/* Card */
+.card{
+  background:linear-gradient(145deg,#111,#1c1c1c);
+  border-radius:18px;
+  padding:22px;
+  margin-top:40px;
+  box-shadow:0 0 35px rgba(255,215,0,.6);
+  animation:float 3s ease-in-out infinite;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+
+.logo{
+  text-align:center;
+  font-size:26px;
+  font-weight:700;
+  color:gold;
+}
+.sub{
+  text-align:center;
+  font-size:14px;
+  color:#ccc;
+  margin-bottom:14px;
+}
+
+.badge{
+  display:inline-block;
+  background:gold;
+  color:#000;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+  margin:0 auto 15px;
+}
+
+ul{
+  list-style:none;
+  margin:15px 0;
+}
+ul li{
+  padding:8px 0;
+  border-bottom:1px solid #333;
+  font-size:15px;
+}
+
+/* Join Button */
+.join{
+  display:block;
+  width:100%;
+  text-align:center;
+  background:linear-gradient(90deg,gold,orange);
+  color:#000;
+  padding:15px;
+  border-radius:12px;
+  font-weight:700;
+  text-decoration:none;
+  margin-top:20px;
+  animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(255,215,0,.7)}
+  70%{box-shadow:0 0 0 15px rgba(255,215,0,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,215,0,0)}
+}
+
+/* Demo Notification */
+.notify{
+  position:fixed;
+  bottom:15px;
+  left:15px;
+  right:15px;
+  background:#111;
+  border-left:4px solid gold;
+  padding:10px;
+  border-radius:8px;
+  font-size:13px;
+  display:none;
+}
+.demo{
+  font-size:11px;
+  color:#888;
+  margin-top:4px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="wrap">
+  <div class="card">
+    <div class="logo">VIP_FIXER™</div>
+    <div class="sub">44,477+ Subscribers</div>
+
+    <div style="text-align:center">
+      <span class="badge">PREMIUM CRICKET ZONE</span>
+    </div>
+
+    <ul>
+      <li>🏏 IPL Toss & Match Pass</li>
+      <li>🌍 World Cup Match Pass</li>
+      <li>🔥 T20 • BBL • WPL Updates</li>
+      <li>📊 Advanced Match Analysis</li>
+      <li>⚡ Fast & Clean Information</li>
+    </ul>
+
+    <a href="https://t.me/YOUR_TELEGRAM_LINK"
+       class="join"
+       target="_blank"
+       onclick="telegramJoinEvent()">
+       JOIN TELEGRAM CHANNEL
+    </a>
+  </div>
+</div>
+
+<div class="notify" id="notify"></div>
+
+<script>
+/* SAFE CUSTOM EVENT – NO VALUE / NO CURRENCY */
+function telegramJoinEvent(){
+  if(typeof fbq !== 'undefined'){
+    fbq('trackCustom','TelegramJoinClick',{
+      channel:'VIP_FIXER'
+    });
+  }
+}
+
+/* Demo Activity Notification (Safe) */
+const msgs=[
+  "User joined VIP_FIXER",
+  "IPL Match Pass viewed",
+  "World Cup Analysis opened",
+  "WPL Update checked",
+  "BBL Toss Insight viewed"
+];
+
+function showDemo(){
+  const n=document.getElementById('notify');
+  n.innerHTML=msgs[Math.floor(Math.random()*msgs.length)] +
+    '<div class="demo">Demo activity preview</div>';
+  n.style.display='block';
+  setTimeout(()=>n.style.display='none',3000);
+}
+setInterval(showDemo,4500);
+</script>
+
+</body>
+</html>
